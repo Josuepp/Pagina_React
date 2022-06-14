@@ -1,0 +1,25 @@
+{
+  "name": "evaluacion5---segundo-parcial-grupo40",
+  "version": "1.0.0",
+  "description": ">**Modalidad**",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss css/style.css -o build/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TestClasss/evaluacion5---segundo-parcial-grupo40.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TestClasss/evaluacion5---segundo-parcial-grupo40/issues"
+  },
+  "homepage": "https://github.com/TestClasss/evaluacion5---segundo-parcial-grupo40#readme",
+  "dependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.17"
+  }
+}

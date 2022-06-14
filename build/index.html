@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/customStyle.css">
+    <title>parcial2</title>
+
+<!--link how to install tailwind in js vanilla:
+https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginners-3e1b5e8fe1a1
+-->
+</head>
+<body>
+    <div class="absolute z-40 flex"><img class="w-16 mr-4 ml-4 rounded-3xl" src="img/IJN COMPUTERS (1).png" alt="logo"><h1 class="invisible md:visible font-black text-xl md:text-3xl mt-4 text-white">IJN COMPUTERS</h1></div>
+    <div class="w-full absolute z-40 flex justify-end pt-2 md:pr-4 showCar "><div class="bg-white rounded-full"><img src="img/shopping-cart.png" alt="cart"></div></div>
+
+
+
+    <img class=" invisible md:visible absolute w-full h-full opacity-50 bg-opacity-50 z-0   " src="img/hh.jpg" alt="halloween banner">
+    <section id="searchSection" class="w-full h-full  bg-yellow-600">
+        
+        <div class="flex justify-center pt-28 md:pt-28 ">
+            <form class="z-40" id="searchForm" action="" >
+                <input id="searchName" class="md:w-96   w-40 border-2 border-gray-300 rounded-md h-8  capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500  pl-7 pr-12 sm:text-sm  " type="search" name="search" >
+                <select class="mb-8 pl-8 md:pl-0 mr-4 border-2 border-gray-300 rounded-md" id="filter"   name="filter" onclick="showMessage()" >
+                    <option value="ram" name = "ram">Ram</option>
+                    <option value="procesador" name = "procesador">Procesador</option>
+                    <option value="color" name = "color">Color</option>
+                    <option value="marca" name = "marca">Marca</option>
+                </select>
+                <input type="submit" value="Buscar" class="mt-3 w-full rounded-md border border-yellow-500 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 sm:mt-0 sm:w-auto sm:text-sm">
+            </form>
+        </div>
+        <div class="flex justify-center">
+            <p class="w-full mx-8 sm:text-justify lg:text-center  font-semibold z-40 text-white pt-2" id="messages" >Avisos</p>
+        </div>
+            <div class="flex justify-center ">
+                
+                    <div class=" w-full md:w-9/12  show bg-gray-100 rounded-3xl  filter drop-shadow-lg overflow-y-auto pt-4 h-space " ></div>
+            </div>
+            
+            <img class="batImg"  id="bat" src="img/murcielago2.gif" alt="">
+        </section>
+        
+
+<section  id="h-full formSection" class=" mt-8 sm:block  w-full md:flex justify-center items-center    ">
+    <div class="w-full pl-4 "><img class="w-full  rounded-3xl" src="img/halloween.png" alt="img"></div>
+    <div class="pl-4   w-full flex justify-center">
+        <form class="" id="formProduct" action="">
+            <label for="pcBrand">Marca</label>
+            <input id="pcBrand" name="marca" class=" border-2 border-gray-300 rounded-md capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm  " type="text" required> 
+                
+            <label for="pcModel">Modelo</label>
+            <input id="pcModel" name="modelo"class="capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
+                
+            <label for="pcColor">Color</label>
+            <input id="pcColor" name="color"class="capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
+
+            <label for="precio">Precio</label>
+            <input id="precio" name="precio"class="capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="number" required>
+
+            <label for="cpu" class="block">Procesador</label>
+            <input id="cpu" name="procesador"class="capitalize focus:ring-indigo-500 focus:border-indigo-500   pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
+            <select id="cpuType" name="cpuType" class="mb-8 border-2 border-gray-300 rounded-md ">
+                <option value="AMD">AMD</option>
+                <option value="intel">Intel</option>
+            </select> <br>
+                
+            <div class="md:flex justify-items-start">
+                <div>
+                    <label for="ram">Ram</label>
+            <select id="ram" name="ram" required class="mb-8 mr-4 border-2 border-gray-300 rounded-md">
+                <option value="2GB">2GB</option>
+                <option value="4GB">4GB</option>
+                <option value="8GB">8GB</option>
+                <option value="16GB">16GB</option>
+                <option value="32GB">32GB</option>
+            </select> 
+                </div>
+                <div>
+                    <label class="" for="storage">Almacenamiento</label>
+                <select id="storage" name="almacenamiento" class="mb-8 border-2 border-gray-300 rounded-md">
+                    <option value="128GB">128GB</option>
+                    <option value="500GB">500GB</option>
+                    <option value="1TB">1TB</option>
+                    <option value="2TB">2TB</option>
+                </select>
+                </div>
+            </div>
+
+            
+            <br>
+            <label for="urlImg">url de imagen</label>
+            <input type="url" id="urlImg" class="mb-8 focus:ring-indigo-500 focus:border-indigo-500   pl-7 pr-8 sm:text-sm border-2 border-gray-300 rounded-md" name="url">
+            <br>
+            <input type="submit" value="Agregar" class="mt-3 w-full rounded-md border border-yellow-500 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm">
+        </form>
+    </div>
+</section>
+<br>
+<footer class="  " style="  background-size: cover; background-image: url(img/footer.png);">
+    <div class="footer-container w-full  text-center mx-5 pt-16 mt-5  block md:flex md:justify-center">
+        <div class="text-center  w-full ">
+            <h2 class="mb-4 text-3xl text-white font-bold">INTEGRANTES</h2>
+        <div class="mt-10">
+            <p class="text-white mb-5">Irvin Josue Pineda Molina</p>
+            <p class="text-white mb-5">Josue David Perez Perez</p>
+            <p class="text-white mb-5">Nestor Esau Recinos Escobar</p>
+        </div>
+        </div>
+
+
+        <div class="mb-28 ">
+            <img class="w-full" src="./img/murcielago.gif" alt="">
+            <div class="text-center">
+                    <div class="text-white">
+                        2021 Todos los Derechos Reservados
+                    </div>
+                    <div class="text-white">
+                        <a href="">Informacion |</a>
+                        <a href="">Politica |</a>
+                        <a href="">Terminos y Condiciones</a>
+                    </div>  
+            </div>
+        </div>
+
+        <div class="text-center w-full">
+            <h2 class="mb-5 text-3xl text-white  font-bold">CONTACTANOS</h2>
+            <div class="flex flex-row justify-center rounded-3xl  md:bg-transparent">
+                <img class="w-8 h-8  " src="./img/facebook-svgrepo-com.svg " alt="logo de facebook">
+                <img class="w-8 h-8 " src="./img/twitter-svgrepo-com.svg " alt="logo de twitter">
+                <img class="w-8 h-8 " src="./img/instagram-svgrepo-com.svg " alt="logo de instagram">
+            </div>
+        </div>
+    </div>
+
+    
+</footer>
+
+<script src="./js/Product.js"></script>
+<script src="./js/Main.js"></script>
+<script src="./js/Busqueda.js"></script>
+</body>
+</html>
